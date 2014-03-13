@@ -1,0 +1,1172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width"/>
+	<style>
+/**********************************************
+* Ink v1.0.5 - Copyright 2013 ZURB Inc        *
+**********************************************/
+
+/* Client-specific Styles & Reset */
+
+#outlook a { 
+  padding:0; 
+} 
+
+body{ 
+  width:100% !important; 
+  min-width: 100%;
+  -webkit-text-size-adjust:100%; 
+  -ms-text-size-adjust:100%; 
+  margin:0; 
+  padding:0;
+}
+
+.ExternalClass { 
+  width:100%;
+} 
+
+.ExternalClass, 
+.ExternalClass p, 
+.ExternalClass span, 
+.ExternalClass font, 
+.ExternalClass td, 
+.ExternalClass div { 
+  line-height: 100%; 
+} 
+
+#backgroundTable { 
+  margin:0; 
+  padding:0; 
+  width:100% !important; 
+  line-height: 100% !important; 
+}
+
+img { 
+  outline:none; 
+  text-decoration:none; 
+  -ms-interpolation-mode: bicubic;
+  width: 100%;
+  max-width: 100%; 
+  float: left; 
+  clear: both; 
+  display: block;
+  margin-bottom: 15px;
+}
+
+center {
+  width: 100%;
+  min-width: 850px;
+}
+
+a img { 
+  border: none;
+}
+
+p {
+  margin: 0 0 0 10px;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+td { 
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  border-collapse: collapse !important; 
+}
+
+table, tr, td {
+  padding: 0;
+  vertical-align: top;
+  text-align: left;
+}
+
+hr {
+  color: #d9d9d9; 
+  background-color: #d9d9d9; 
+  height: 1px; 
+  border: none;
+}
+
+/* Responsive Grid */
+
+table.body {
+  height: 100%;
+  width: 100%;
+}
+
+table.container {
+  width: 850px;
+  margin: 0 auto;
+  text-align: inherit;
+}
+
+table.row { 
+  padding: 0px; 
+  width: 100%;
+  position: relative;
+}
+
+table.container table.row {
+  display: block;
+}
+
+td.wrapper {
+  padding: 10px 20px 0px 0px;
+  position: relative;
+}
+
+table.columns,
+table.column {
+  margin: 0 auto;
+}
+
+table.columns td,
+table.column td {
+  padding: 0px 0px 10px; 
+}
+
+table.columns td.sub-columns,
+table.column td.sub-columns,
+table.columns td.sub-column,
+table.column td.sub-column {
+  padding-right: 10px;
+}
+
+td.sub-column, td.sub-columns {
+  min-width: 0px;
+}
+
+table.row td.last,
+table.container td.last {
+  padding-right: 0px;
+}
+
+table.one { width: 30px; }
+table.two { width: 80px; }
+table.three { width: 130px; }
+table.four { width: 273px; }
+table.five { width: 230px; }
+table.six { width: 415px; }
+table.seven { width: 330px; }
+table.eight { width: 566px; }
+table.nine { width: 430px; }
+table.ten { width: 708px; }
+table.eleven { width: 530px; }
+table.twelve { width: 860px; }
+
+table.one center { min-width: 30px; }
+table.two center { min-width: 80px; }
+table.three center { min-width: 130px; }
+table.four center { min-width: 283px; }
+table.five center { min-width: 230px; }
+table.six center { min-width: 425px; }
+table.seven center { min-width: 330px; }
+table.eight center { min-width: 566px; }
+table.nine center { min-width: 430px; }
+table.ten center { min-width: 480px; }
+table.eleven center { min-width: 530px; }
+table.twelve center { min-width: 850px; }
+
+table.one .panel center { min-width: 10px; }
+table.two .panel center { min-width: 60px; }
+table.three .panel center { min-width: 110px; }
+table.four .panel center { min-width: 160px; }
+table.five .panel center { min-width: 210px; }
+table.six .panel center { min-width: 260px; }
+table.seven .panel center { min-width: 310px; }
+table.eight .panel center { min-width: 360px; }
+table.nine .panel center { min-width: 410px; }
+table.ten .panel center { min-width: 460px; }
+table.eleven .panel center { min-width: 510px; }
+table.twelve .panel center { min-width: 560px; }
+
+.body .columns td.one,
+.body .column td.one { width: 8.333333%; }
+.body .columns td.two,
+.body .column td.two { width: 16.666666%; }
+.body .columns td.three,
+.body .column td.three { width: 25%; }
+.body .columns td.four,
+.body .column td.four { width: 33.333333%; }
+.body .columns td.five,
+.body .column td.five { width: 41.666666%; }
+.body .columns td.six,
+.body .column td.six { width: 50%; }
+.body .columns td.seven,
+.body .column td.seven { width: 58.333333%; }
+.body .columns td.eight,
+.body .column td.eight { width: 66.666666%; }
+.body .columns td.nine,
+.body .column td.nine { width: 75%; }
+.body .columns td.ten,
+.body .column td.ten { width: 83.333333%; }
+.body .columns td.eleven,
+.body .column td.eleven { width: 91.666666%; }
+.body .columns td.twelve,
+.body .column td.twelve { width: 100%; }
+
+td.offset-by-one { padding-left: 50px; }
+td.offset-by-two { padding-left: 100px; }
+td.offset-by-three { padding-left: 150px; }
+td.offset-by-four { padding-left: 200px; }
+td.offset-by-five { padding-left: 250px; }
+td.offset-by-six { padding-left: 300px; }
+td.offset-by-seven { padding-left: 350px; }
+td.offset-by-eight { padding-left: 400px; }
+td.offset-by-nine { padding-left: 450px; }
+td.offset-by-ten { padding-left: 500px; }
+td.offset-by-eleven { padding-left: 550px; }
+
+td.expander {
+  visibility: hidden;
+  width: 0px;
+  padding: 0 !important;
+}
+
+table.columns .text-pad,
+table.column .text-pad {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+table.columns .left-text-pad,
+table.columns .text-pad-left,
+table.column .left-text-pad,
+table.column .text-pad-left {
+  padding-left: 10px;
+}
+
+table.columns .right-text-pad,
+table.columns .text-pad-right,
+table.column .right-text-pad,
+table.column .text-pad-right {
+  padding-right: 10px;
+}
+
+/* Block Grid */
+
+.block-grid {
+  width: 100%;
+  max-width: 850px;
+}
+
+.block-grid td {
+  display: inline-block;
+  padding:10px;
+}
+
+.two-up td {
+  width:270px;
+}
+
+.three-up td {
+  width:173px;
+}
+
+.four-up td {
+  width:125px;
+}
+
+.five-up td {
+  width:96px;
+}
+
+.six-up td {
+  width:76px;
+}
+
+.seven-up td {
+  width:62px;
+}
+
+.eight-up td {
+  width:52px;
+}
+
+/* Alignment & Visibility Classes */
+
+table.center, td.center {
+  text-align: center;
+}
+
+h1.center,
+h2.center,
+h3.center,
+h4.center,
+h5.center,
+h6.center {
+  text-align: center;
+}
+
+span.center {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+img.center {
+  margin: 0 auto;
+  float: none;
+}
+
+.show-for-small,
+.hide-for-desktop {
+  display: none;
+}
+
+/* Typography */
+
+body, table.body, h1, h2, h3, h4, h5, h6, p, td { 
+  color: #4d4d4d;
+  font-family: "Helvetica", "Arial", sans-serif; 
+  font-weight: normal; 
+  padding:0; 
+  margin: 0;
+  text-align: left; 
+  line-height: 1.3;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  word-break: normal;
+}
+
+h1 {font-size: 40px;}
+h2 {font-size: 34px;}
+h3 {font-size: 30px;}
+h4 {font-size: 26px;}
+h5 {font-size: 22px;}
+h6 {font-size: 18px;}
+body, table.body, p, td {font-size: 15px;line-height:1.4;}
+
+p.lead, p.lede, p.leed {
+  font-size: 18px;
+  line-height:21px;
+}
+
+p { 
+  margin-bottom: 10px;
+}
+
+small {
+  font-size: 10px;
+}
+
+a {
+  color: #ff3844; 
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover { 
+  color: #2795b6 !important;
+}
+
+a:active { 
+  color: #2795b6 !important;
+}
+
+a:visited { 
+  color: #2ba6cb !important;
+}
+
+h1 a, 
+h2 a, 
+h3 a, 
+h4 a, 
+h5 a, 
+h6 a {
+  color: #2ba6cb;
+}
+
+h1 a:active, 
+h2 a:active,  
+h3 a:active, 
+h4 a:active, 
+h5 a:active, 
+h6 a:active { 
+  color: #2ba6cb !important; 
+} 
+
+h1 a:visited, 
+h2 a:visited,  
+h3 a:visited, 
+h4 a:visited, 
+h5 a:visited, 
+h6 a:visited { 
+  color: #2ba6cb !important; 
+} 
+
+/* Panels */
+
+.panel {
+  background: #f2f2f2;
+  border: 1px solid #d9d9d9;
+  padding: 10px !important;
+}
+
+.sub-grid table {
+  width: 100%;
+}
+
+.sub-grid td.sub-columns {
+  padding-bottom: 0;
+}
+
+/* Buttons */
+
+table.button,
+table.tiny-button,
+table.small-button,
+table.medium-button,
+table.large-button {
+  width: 100%;
+  overflow: hidden;
+}
+
+table.button td,
+table.tiny-button td,
+table.small-button td,
+table.medium-button td,
+table.large-button td {
+  display: block;
+  width: auto !important;
+  text-align: center;
+  background: #2ba6cb;
+  border: 1px solid #2284a1;
+  color: #ffffff;
+  padding: 8px 0;
+}
+
+table.tiny-button td {
+  padding: 5px 0 4px;
+}
+
+table.small-button td {
+  padding: 8px 0 7px;
+}
+
+table.medium-button td {
+  padding: 12px 0 10px;
+}
+
+table.large-button td {
+  padding: 21px 0 18px;
+}
+
+table.button td a,
+table.tiny-button td a,
+table.small-button td a,
+table.medium-button td a,
+table.large-button td a {
+  font-weight: bold;
+  text-decoration: none;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+table.tiny-button td a {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+table.small-button td a {
+  font-size: 16px;
+}
+
+table.medium-button td a {
+  font-size: 20px;
+}
+
+table.large-button td a {
+  font-size: 24px;
+}
+
+table.button:hover td,
+table.button:visited td,
+table.button:active td {
+  background: #2795b6 !important;
+}
+
+table.button:hover td a,
+table.button:visited td a,
+table.button:active td a {
+  color: #fff !important;
+}
+
+table.button:hover td,
+table.tiny-button:hover td,
+table.small-button:hover td,
+table.medium-button:hover td,
+table.large-button:hover td {
+  background: #2795b6 !important;
+}
+
+table.button:hover td a,
+table.button:active td a,
+table.button td a:visited,
+table.tiny-button:hover td a,
+table.tiny-button:active td a,
+table.tiny-button td a:visited,
+table.small-button:hover td a,
+table.small-button:active td a,
+table.small-button td a:visited,
+table.medium-button:hover td a,
+table.medium-button:active td a,
+table.medium-button td a:visited,
+table.large-button:hover td a,
+table.large-button:active td a,
+table.large-button td a:visited {
+  color: #ffffff !important; 
+}
+
+table.secondary td {
+  background: #e9e9e9;
+  border-color: #d0d0d0;
+  color: #555;
+}
+
+table.secondary td a {
+  color: #555;
+}
+
+table.secondary:hover td {
+  background: #d0d0d0 !important;
+  color: #555;
+}
+
+table.secondary:hover td a,
+table.secondary td a:visited,
+table.secondary:active td a {
+  color: #555 !important;
+}
+
+table.success td {
+  background: #5da423;
+  border-color: #457a1a;
+}
+
+table.success:hover td {
+  background: #457a1a !important;
+}
+
+table.alert td {
+  background: #c60f13;
+  border-color: #970b0e;
+}
+
+table.alert:hover td {
+  background: #970b0e !important;
+}
+
+table.radius td {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+table.round td {
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+  border-radius: 500px;
+}
+
+/* Outlook First */
+
+body.outlook p {
+  display: inline !important;
+}
+
+/*  Media Queries */
+
+@media only screen and (max-width: 700px) {
+
+  table[class="body"] img {
+    width: auto !important;
+    height: auto !important;
+  }
+
+  table[class="body"] center {
+    min-width: 0 !important;
+  }
+
+  table[class="body"] .container {
+    width: 95% !important;
+  }
+
+  table[class="body"] .row {
+    width: 100% !important;
+    display: block !important;
+  }
+
+  table[class="body"] .wrapper {
+    display: block !important;
+    padding-right: 0 !important;
+  }
+
+  table[class="body"] .columns,
+  table[class="body"] .column {
+    table-layout: fixed !important;
+    float: none !important;
+    width: 100% !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    display: block !important;
+  }
+
+  table[class="body"] .wrapper.first .columns,
+  table[class="body"] .wrapper.first .column {
+    display: table !important;
+  }
+
+  table[class="body"] table.columns td,
+  table[class="body"] table.column td {
+    width: 100% !important;
+  }
+
+  table[class="body"] .columns td.one,
+  table[class="body"] .column td.one { width: 8.333333% !important; }
+  table[class="body"] .columns td.two,
+  table[class="body"] .column td.two { width: 16.666666% !important; }
+  table[class="body"] .columns td.three,
+  table[class="body"] .column td.three { width: 25% !important; }
+  table[class="body"] .columns td.four,
+  table[class="body"] .column td.four { width: 33.333333% !important; }
+  table[class="body"] .columns td.five,
+  table[class="body"] .column td.five { width: 41.666666% !important; }
+  table[class="body"] .columns td.six,
+  table[class="body"] .column td.six { width: 50% !important; }
+  table[class="body"] .columns td.seven,
+  table[class="body"] .column td.seven { width: 58.333333% !important; }
+  table[class="body"] .columns td.eight,
+  table[class="body"] .column td.eight { width: 66.666666% !important; }
+  table[class="body"] .columns td.nine,
+  table[class="body"] .column td.nine { width: 75% !important; }
+  table[class="body"] .columns td.ten,
+  table[class="body"] .column td.ten { width: 83.333333% !important; }
+  table[class="body"] .columns td.eleven,
+  table[class="body"] .column td.eleven { width: 91.666666% !important; }
+  table[class="body"] .columns td.twelve,
+  table[class="body"] .column td.twelve { width: 100% !important; }
+
+  table[class="body"] td.offset-by-one,
+  table[class="body"] td.offset-by-two,
+  table[class="body"] td.offset-by-three,
+  table[class="body"] td.offset-by-four,
+  table[class="body"] td.offset-by-five,
+  table[class="body"] td.offset-by-six,
+  table[class="body"] td.offset-by-seven,
+  table[class="body"] td.offset-by-eight,
+  table[class="body"] td.offset-by-nine,
+  table[class="body"] td.offset-by-ten,
+  table[class="body"] td.offset-by-eleven {
+    padding-left: 0 !important;
+  }
+
+  table[class="body"] table.columns td.expander {
+    width: 1px !important;
+  }
+
+  table[class="body"] .right-text-pad,
+  table[class="body"] .text-pad-right {
+    padding-left: 10px !important;
+  }
+
+  table[class="body"] .left-text-pad,
+  table[class="body"] .text-pad-left {
+    padding-right: 10px !important;
+  }
+
+  table[class="body"] .hide-for-small,
+  table[class="body"] .show-for-desktop {
+    display: none !important;
+  }
+
+  table[class="body"] .show-for-small,
+  table[class="body"] .hide-for-desktop {
+    display: inherit !important;
+  }
+}
+
+  </style>
+  <style>
+  .header td {
+    text-align: center;
+  }
+
+  .subheader {
+    background: #4d4d4d;
+  }
+
+  .subheader td {
+    color: #fff;
+  }
+
+  .row.edicion .wrapper {
+    padding-top: 2px;
+  }
+  
+  h2 {
+    border-bottom: 2px solid #B7B7B7;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  .row.separador td {
+    background: #f2f2f2;
+    padding: 1px 5px;
+  }
+  
+  .row.coyuntura img {
+    width: auto;
+margin: 10px auto;
+float: none;
+  }
+
+  </style>
+</head>
+<body>
+	<table class="body">
+		<tr>
+			<td class="center" align="center" valign="top">
+        <center>
+
+          <br>
+
+          <table class="container">
+            <tr>
+              <td>
+
+                <!-- HEADER -->
+                <table class="row header">
+                  <tr>
+                    <td class="wrapper last">
+
+                      <table class="twelve columns">
+                        <tr>
+                          <td style="max-height: 105px; color: transparent; padding: 0; margin: 0;">
+                            <img style="margin: 1px" src="http://imgur.com/Ky9pOiS.jpg">
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                  </tr>
+                </table>
+                <!-- /HEADER -->
+
+                <!-- SUBHEADER -->
+                <table class="row subheader">
+                  <tr>
+                    <td class="wrapper">
+
+                      <table class="six columns">
+                        <tr>
+                          <td>
+
+                            <b>No.</b> 4
+
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                    <td class="wrapper last">
+
+                      <table class="six columns">
+                        <tr>
+                          <td class="last" style="text-align: right;">
+                            
+                            20 DE FEBRERO 2014
+                            
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                  </tr>
+                </table>
+                <!-- SUBHEADER -->
+
+                <!-- EDICION -->
+                <table class="row edicion" bgcolor="#e6e6e6">
+                  <tr>
+                    <td class="wrapper">
+
+                      <table class="two columns">
+                        <tr>
+                          <td class="edicion-cosa">
+                            <img style="margin: 1px 0 0 0" src="http://imgur.com/W2LB6L4.jpg">
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                    <td class="wrapper last">
+
+                      <table class="ten columns">
+                        <tr>
+                          <td style="line-height: 26px;color: #000; font-size: 20px; font-weight: bold;padding: 0;">
+                            <span style="color:#cc0000">Tema a posicionar</span> | <span style="color:#f15a24">Coyuntura</span> | <span style="color:#0071bc">Materiales Estrate&#769;gicos</span><br/> 
+                            | <span style="color:#663333">Estatus Legislativo</span> | <span style="color:#990066">Asuntos Generales</span>
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+
+                  </tr>
+                </table>
+                <!-- /EDICION -->
+
+                <!-- EDITORIAL -->
+                <table class="row editorial">
+                  <tr>
+                    <td class="wrapper last">
+
+                      <table class="four columns">
+                        <tr>
+                          <td>
+
+                            <img style="margin-top: 50px;" class="center" src="http://imgur.com/7mkXFHO.jpg">
+
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                    <td class="wrapper last">
+
+                      <table class="eight columns">
+                        <tr>
+                          <td>
+
+                            <h2>&nbsp;</h2>
+                            Como todos sabemos, las tendencias actuales plantean un importante desaf&iacute;o que afecta la Reputaci&oacute;n de nuestra Compa&ntilde;&iacute;a y de la categor&iacute;a. Es por eso que uno de los corredores fundamentales de trabajo de la Campa&ntilde;a de Category leadership para Am&eacute;rica Latina est&aacute; enfocado en la generaci&oacute;n y publicaci&oacute;n de informaci&oacute;n basada en la ciencia, equilibrada e integradora.<br />
+<br />
+En las pr&oacute;ximas semanas deberemos redoblar nuestros esfuerzos en el posicionamiento de los contenidos generados desde el ch&aacute;rter y creados localmente con el objetivo de balancear las agendas en un momento en el que existe una tendencia creciente a la implementaci&oacute;n de campa&ntilde;as de desprestigio infundadas y la aplicaci&oacute;n de pol&iacute;ticas restrictivas. <br />
+<br />
+Nuevamente les pedimos su retroalimentaci&oacute;n sobre las acciones emprendidas ya que ir contando con m&eacute;tricas s&oacute;lidas es un elemento clave si queremos ser eficientes en la implementaci&oacute;n de nuestros planes.<br />
+<br />
+Asimismo, les pedimos mantener a nuestro equipo informado de las novedades que est&aacute;n surgiendo en cada uno de sus mercados ya que, como nunca antes, vemos iniciativas replicarse a gran velocidad.<br />
+<br />
+El trabajo en equipo, la focalizaci&oacute;n para lograr nuestros objetivos y la retroalimentaci&oacute;n ser&aacute;n las claves de &eacute;xito de nuestro trabajo regional.                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+
+                  </tr>
+                </table>
+                <!-- /EDITORIAL -->
+
+                <!-- SEPARADOR: COYUNTURA -->
+                <table class="row separador">
+                  <tr>
+                    <td class="wrapper last">
+
+                      <table class="twelve columns">
+                        <tr>
+                          <td>
+                            &nbsp;
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                  </tr>
+                </table>
+                <!-- /SEPARADOR COYUNTURA -->
+
+               <!-- COYUNTURA -->
+                <table class="row coyuntura">
+                  <tr>
+                    <td class="wrapper">
+
+                      <table class="six columns">
+                        <tr>
+                          <td>
+
+                            <h2><span style="color:#ba0412">Tema a posicionar</span></h2>
+                            <strong>Az&uacute;car y Fructosa</strong><br />
+                            <center><img src="http://imgur.com/YQEnedr.jpg" style="display: block"></center>
+                            Los mitos creados sobre el consumo del az&uacute;car y la fructuosa existen hace tiempo y llevan a &ldquo;condenar&rdquo; estos ingredientes, los cuales son naturales y se encuentran presentes en muchas frutas. Las diversas interpretaciones a partir de ello, han permitido crear en la Opini&oacute;n P&uacute;blica una percepci&oacute;n negativa de ambos ingredientes.<br />
+                            <br />
+                            Para atender a este desaf&iacute;o hemos incorporado nuevos art&iacute;culos nuevos producidos referentes al consumo del az&uacute;car y la fructuosa y la necesidad del cuerpo humano de consumir estos nutrientes que generan energ&iacute;a.<br />
+                            <br />
+                            Adem&aacute;s, a partir de diversos foros realizados o por realizarse en algunos de los pa&iacute;ses de la regi&oacute;n hemos incorporado y actualizado textos con contenidos cr&iacute;ticos respecto a las Pol&iacute;ticas P&uacute;blicas Restrictivas. Los invitamos a revisar todos los textos en:<br />
+                            <a href="http://goo.gl/XWxUNu">http://goo.gl/XWxUNu</a>
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                    <td class="wrapper last">
+
+                      <table class="six columns">
+                        <tr>
+                          <td>
+
+                            <h2><span style="color:#f15a24">Coyuntura</span></h2>
+                            La Dra. Margaret Chan, Directora de la Organizaci&oacute;n Mundial de la Salud (OMS) realiza su primera visita a Per&uacute; en estos d&iacute;as y participar&aacute; el viernes 21 de febrero en la conferencia internacional: Hacia la Cobertura Universal en Salud, acompa&ntilde;ada de la Dra. Carissa Etienne, Directora de la Organizaci&oacute;n Panamericana de la Salud (OPS); la Ministra de Salud del Per&uacute;, Sra. Midori de Habich.<br />
+                            <br />
+                            Chan se ha manifestado p&uacute;blicamente a favor de medidas impositivas para contener problemas de salud p&uacute;blica. Por esa raz&oacute;n es relevante su visita a Per&uacute;. PAC LAG compartir&aacute; con la regi&oacute;n un plan de acci&oacute;n sobre la visita de la directora de la OMS en el marco de la campa&ntilde;a 360&deg; de Category Leadership para Am&eacute;rica Latina. Los mantendremos informados sobre las conclusiones y trascendencia de este Congreso. Es importante contar con un monitoreo enfocado en cada BU para identificar posibles repercusiones.<br />
+                            <br />
+                            Por otra parte, respecto a la realizaci&oacute;n del Foro Internacional sobre Alimentaci&oacute;n Saludable en las Escuelas realizado el pasado 17 de febrero en la ciudad de M&eacute;xico, les informamos que los participantes insistieron que en Am&eacute;rica Latina se necesita que las pol&iacute;ticas p&uacute;blicas sean restrictivas y que los lineamientos est&eacute;n en la l&iacute;nea de prohibir la venta de alimentos y bebidas en las escuelas.<br />
+                            <br />
+                            Se mencion&oacute; el caso de California en Estados Unidos, de Jap&oacute;n, y de Brasil, en el que se prohibi&oacute; la venta de alimentos y bebidas en las escuelas ha disminuido el consumo cal&oacute;rico de los ni&ntilde;os y por ende los niveles de obesidad en ni&ntilde;os que asisten a las escuelas p&uacute;blicas donde se han implementado estos programas.<br />
+                            <br />
+                            Participaron: Zaira Valderrama &Aacute;lvarez (Secretar&iacute;a de Salud &ndash; M&eacute;xico), Dr. Fabio De Silva Gomes, Alejandro Calvillo, Dr. Juan Rivera Donmarco, Mtra. Rosa Iliana Puga V&aacute;zquez (Secretar&iacute;a de Educaci&oacute;n P&uacute;blica- M&eacute;xico), Julieta Ponce, Dra. Jamie F. Chiriki, Universidad de Illinois Chicago, de todos ellos podr&aacute;n encontrar sus perfiles en el documento correspondiente. Para mayor informaci&oacute;n por favor consultar el reporte completo en el link que incluimos a continuaci&oacute;n.<br/><br />
+                            <a href="https://teams.coca-cola.com/sites/MarketingTheCategoryLAG/ContentGeneration/SitePages/Home.aspx">https://teams.coca-cola.com/sites/MarketingTheCategoryLAG/ContentGeneration/SitePages/Home.aspx</a><br />
+                              
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+
+                  </tr>
+                </table>
+                <!-- /COYUNTURA -->
+
+                <!-- SEPARADOR: ESTATUS -->
+                <table class="row separador">
+                  <tr>
+                    <td class="wrapper last">
+
+                      <table class="twelve columns">
+                        <tr>
+                          <td>&nbsp;
+                          </td>
+                          <td class="expander"></>
+                        </tr>
+                      </table>
+
+                    </td>
+                  </tr>
+                </table>
+                <!-- /SEPARADOR: ESTATUS -->
+
+               <!-- ESTATUS -->
+                <table class="row estatus">
+                  <tr>
+                    <td class="wrapper">
+
+                      <table class="eight columns">
+                        <tr>
+                          <td>
+                            <h2><span style="color:#0071bc">Materiales Estrate&#769;gicos</span></h2>
+                            Hemos recibido su retroalimentaci&oacute;n respecto a diversos documentos que les dimos a conocer, en ese sentido ustedes podr&aacute;n consultar en el Share Point de Category Leadership la actualizaci&oacute;n de:<br />
+                            <ul>
+                              <li>Directorio de voceros</li>
+                              <li>Mapas de Actores</li>
+                              <li>Plan de accio&#769;n de la conferencia <i>Hacia la Cobertura Universal en Salud</i></li>
+                            </ul>
+                            Asimismo, podra&#769;n consultar:<br />
+                            <ul>
+                              <li>Reporte del Foro Internacional sobre Alimentaci&oacute;n Saludable en las Escuelas</li>
+                              <li>Decreto Modificaci&oacute;n a la Ley de Salud y Publicidad- M&eacute;xico</li>
+                            </ul>
+                            Tambie&#769;n continuamos con conferencias telefo&#769;nicas explicativas sobre el Sistema de Monitoreo y Evaluacio&#769;n de la Campan&#771;a 360&deg; de Category Leadership para Ame&#769;rica Latina.
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                    <td class="wrapper last">
+
+                      <table class="four columns">
+                        <tr>
+                          <td>
+
+                            <img src="http://imgur.com/CXHDbJY.jpg">
+
+
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+
+                  </tr>
+                </table>
+                <!-- /ESTATUS -->
+
+                <!-- SEPARADOR: NOVEDADES -->
+                <table class="row separador">
+                  <tr>
+                    <td class="wrapper last">
+
+                      <table class="twelve columns">
+                        <tr>
+                          <td>
+                            NOVEDADES
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                  </tr>
+                </table>
+                <!-- /SEPARADOR: NOVEDADES -->
+
+             
+
+
+                <!-- NOVEDADES -->
+                <table class="row coyuntura">
+                  <tr>
+                    <td class="wrapper last">
+
+                      <table class="twelve columns">
+                        <tr>
+                          <td>
+
+                            <h2><span style="color:#663333">Estatus Legislativo</span></h2>
+                            <img style="float:left; margin: 10px 20px 20px 0;" src="http://i.imgur.com/tslI444.jpg">
+                            El pasado 14 de febrero se public&oacute; en el Diario Oficial de la Federaci&oacute;n de M&eacute;xico, el Decreto del Presidente Enrique Pe&ntilde;a Nieto, sobre modificaciones al Reglamento de la Ley General de Salud en materia de etiquetado y publicidad. Estas modificaciones forman parte del Plan de Combate a la obesidad y la diabetes que present&oacute; el Presidente en octubre pasado y que entrar&aacute; en vigor el pr&oacute;ximo 1 de marzo. <br />
+                            Entre las modificaciones que se reglamentaron se incluye que las etiquetas deber&aacute;n reportar el total del contenido de az&uacute;car y de calor&iacute;as en los envases familiares.                  
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                    
+
+                  </tr>
+                </table>
+                <!-- /NOVEDADES -->
+
+
+                <!-- SEPARADOR: ASUNTOS -->
+                <table class="row separador">
+                  <tr>
+                    <td class="wrapper last">
+
+                      <table class="twelve columns">
+                        <tr>
+                          <td>
+                            &nbsp;
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                  </tr>
+                </table>
+                <!-- /SEPARADOR: ASUNTOS -->
+
+               <!-- NUEVA RUTINA -->
+                <table class="row rutina">
+                  <tr>
+                    <td class="wrapper">
+
+                      <table class="eight columns">
+                        <tr>
+                          <td>
+                            <h2><span style="color:#990066">Asuntos Generales</span></h2>
+
+                           	El pr&oacute;ximo 21 de febrero realizaremos la cuarta reuni&oacute;n quincenal de la Campa&ntilde;a 360&deg; de Category Leadership para Am&eacute;rica Latina. El horario ser&aacute; de 11:30 a 13:00, hora de M&eacute;xico y Centroam&eacute;rica, en formato de videoconferencia.<br />
+Aqu&iacute; puedes consultar la agenda de la reuni&oacute;n:
+                            <ul>
+                              <li>Update PAC LAG<br />
+                              <li>Update de PAC de cada BU<br />
+                              <ul>
+                                <li>Cobertura medi&aacute;tica</li>
+                                <li>Sistema de m&eacute;tricas</li>
+                                <li>Necesidades</li>
+                                <li>Reporte de coyuntura</li>
+                              </ul>
+                            </ul>
+                            <br />
+                            
+                            <ul>
+                              <li>Pro&#769;ximas acciones</li>
+                              <ul>
+                                <li>Propuestas para presentaci&oacute;n de Best Practices por parte de las BUs.</li>
+                              </ul>
+                            </ul>
+    
+                            
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                    <td class="wrapper last">
+
+                      <table class="four columns">
+                        <tr>
+                          <td>
+
+                            <img style="margin-top: 50px;" src="http://imgur.com/0oBHUsN.jpg">
+
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+
+                  </tr>
+                </table>
+                <!-- /NUEVA RUTINA -->
+
+                
+                <!-- FOOTER -->
+                <table class="row header">
+                  <tr>
+                    <td class="wrapper last">
+
+                      <table class="twelve columns">
+                        <tr>
+                          <td style="height: 50px; background: #4d4d4d; color: #fff;padding: 15px 0 0;
+font-size: 11px;">
+<center>Este documento es s&oacute;lo para <b>USO INTERNO Y CONFIDENCIAL</b>. Su difusi&oacute;n, distribuci&oacute;n, retransmisi&oacute;n, copia de cualquier tipo, est&aacute; prohibida y sujeta a las penalidades establecidas en las leyes y c&oacute;digos relevantes.</center>
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                  </tr>
+                </table>
+                <!-- FOOTER -->
+
+                <!-- container end below -->
+              </td>
+            </tr>
+          </table>
+
+        </center>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

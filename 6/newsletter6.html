@@ -1,0 +1,1176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width"/>
+	<style>
+/**********************************************
+* Ink v1.0.5 - Copyright 2013 ZURB Inc        *
+**********************************************/
+
+/* Client-specific Styles & Reset */
+
+#outlook a {
+  padding:0;
+}
+
+body{
+  width:100% !important;
+  min-width: 100%;
+  -webkit-text-size-adjust:100%;
+  -ms-text-size-adjust:100%;
+  margin:0;
+  padding:0;
+}
+
+.ExternalClass {
+  width:100%;
+}
+
+.ExternalClass,
+.ExternalClass p,
+.ExternalClass span,
+.ExternalClass font,
+.ExternalClass td,
+.ExternalClass div {
+  line-height: 100%;
+}
+
+#backgroundTable {
+  margin:0;
+  padding:0;
+  width:100% !important;
+  line-height: 100% !important;
+}
+
+img {
+  outline:none;
+  text-decoration:none;
+  -ms-interpolation-mode: bicubic;
+  width: 100%;
+  max-width: 100%;
+  float: left;
+  clear: both;
+  display: block;
+  margin-bottom: 15px;
+}
+
+center {
+  width: 100%;
+  min-width: 850px;
+}
+
+a img {
+  border: none;
+}
+
+p {
+  margin: 0 0 0 10px;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+td {
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  border-collapse: collapse !important;
+}
+
+table, tr, td {
+  padding: 0;
+  vertical-align: top;
+  text-align: left;
+}
+
+hr {
+  color: #d9d9d9;
+  background-color: #d9d9d9;
+  height: 1px;
+  border: none;
+}
+
+/* Responsive Grid */
+
+table.body {
+  height: 100%;
+  width: 100%;
+}
+
+table.container {
+  width: 850px;
+  margin: 0 auto;
+  text-align: inherit;
+}
+
+table.row {
+  padding: 0px;
+  width: 100%;
+  position: relative;
+}
+
+table.container table.row {
+  display: block;
+}
+
+td.wrapper {
+  padding: 10px 20px 0px 0px;
+  position: relative;
+}
+
+table.columns,
+table.column {
+  margin: 0 auto;
+}
+
+table.columns td,
+table.column td {
+  padding: 0px 0px 10px;
+}
+
+table.columns td.sub-columns,
+table.column td.sub-columns,
+table.columns td.sub-column,
+table.column td.sub-column {
+  padding-right: 10px;
+}
+
+td.sub-column, td.sub-columns {
+  min-width: 0px;
+}
+
+table.row td.last,
+table.container td.last {
+  padding-right: 0px;
+}
+
+table.one { width: 30px; }
+table.two { width: 80px; }
+table.three { width: 130px; }
+table.four { width: 273px; }
+table.five { width: 230px; }
+table.six { width: 415px; }
+table.seven { width: 330px; }
+table.eight { width: 566px; }
+table.nine { width: 430px; }
+table.ten { width: 708px; }
+table.eleven { width: 530px; }
+table.twelve { width: 860px; }
+
+table.one center { min-width: 30px; }
+table.two center { min-width: 80px; }
+table.three center { min-width: 130px; }
+table.four center { min-width: 283px; }
+table.five center { min-width: 230px; }
+table.six center { min-width: 425px; }
+table.seven center { min-width: 330px; }
+table.eight center { min-width: 566px; }
+table.nine center { min-width: 430px; }
+table.ten center { min-width: 480px; }
+table.eleven center { min-width: 530px; }
+table.twelve center { min-width: 850px; }
+
+table.one .panel center { min-width: 10px; }
+table.two .panel center { min-width: 60px; }
+table.three .panel center { min-width: 110px; }
+table.four .panel center { min-width: 160px; }
+table.five .panel center { min-width: 210px; }
+table.six .panel center { min-width: 260px; }
+table.seven .panel center { min-width: 310px; }
+table.eight .panel center { min-width: 360px; }
+table.nine .panel center { min-width: 410px; }
+table.ten .panel center { min-width: 460px; }
+table.eleven .panel center { min-width: 510px; }
+table.twelve .panel center { min-width: 560px; }
+
+.body .columns td.one,
+.body .column td.one { width: 8.333333%; }
+.body .columns td.two,
+.body .column td.two { width: 16.666666%; }
+.body .columns td.three,
+.body .column td.three { width: 25%; }
+.body .columns td.four,
+.body .column td.four { width: 33.333333%; }
+.body .columns td.five,
+.body .column td.five { width: 41.666666%; }
+.body .columns td.six,
+.body .column td.six { width: 50%; }
+.body .columns td.seven,
+.body .column td.seven { width: 58.333333%; }
+.body .columns td.eight,
+.body .column td.eight { width: 66.666666%; }
+.body .columns td.nine,
+.body .column td.nine { width: 75%; }
+.body .columns td.ten,
+.body .column td.ten { width: 83.333333%; }
+.body .columns td.eleven,
+.body .column td.eleven { width: 91.666666%; }
+.body .columns td.twelve,
+.body .column td.twelve { width: 100%; }
+
+td.offset-by-one { padding-left: 50px; }
+td.offset-by-two { padding-left: 100px; }
+td.offset-by-three { padding-left: 150px; }
+td.offset-by-four { padding-left: 200px; }
+td.offset-by-five { padding-left: 250px; }
+td.offset-by-six { padding-left: 300px; }
+td.offset-by-seven { padding-left: 350px; }
+td.offset-by-eight { padding-left: 400px; }
+td.offset-by-nine { padding-left: 450px; }
+td.offset-by-ten { padding-left: 500px; }
+td.offset-by-eleven { padding-left: 550px; }
+
+td.expander {
+  visibility: hidden;
+  width: 0px;
+  padding: 0 !important;
+}
+
+table.columns .text-pad,
+table.column .text-pad {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+table.columns .left-text-pad,
+table.columns .text-pad-left,
+table.column .left-text-pad,
+table.column .text-pad-left {
+  padding-left: 10px;
+}
+
+table.columns .right-text-pad,
+table.columns .text-pad-right,
+table.column .right-text-pad,
+table.column .text-pad-right {
+  padding-right: 10px;
+}
+
+/* Block Grid */
+
+.block-grid {
+  width: 100%;
+  max-width: 850px;
+}
+
+.block-grid td {
+  display: inline-block;
+  padding:10px;
+}
+
+.two-up td {
+  width:270px;
+}
+
+.three-up td {
+  width:173px;
+}
+
+.four-up td {
+  width:125px;
+}
+
+.five-up td {
+  width:96px;
+}
+
+.six-up td {
+  width:76px;
+}
+
+.seven-up td {
+  width:62px;
+}
+
+.eight-up td {
+  width:52px;
+}
+
+/* Alignment & Visibility Classes */
+
+table.center, td.center {
+  text-align: center;
+}
+
+h1.center,
+h2.center,
+h3.center,
+h4.center,
+h5.center,
+h6.center {
+  text-align: center;
+}
+
+span.center {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+img.center {
+  margin: 0 auto;
+  float: none;
+}
+
+.show-for-small,
+.hide-for-desktop {
+  display: none;
+}
+
+/* Typography */
+
+body, table.body, h1, h2, h3, h4, h5, h6, p, td {
+  color: #4d4d4d;
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-weight: normal;
+  padding:0;
+  margin: 0;
+  text-align: left;
+  line-height: 1.3;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  word-break: normal;
+}
+
+h1 {font-size: 40px;}
+h2 {font-size: 34px;}
+h3 {font-size: 30px;}
+h4 {font-size: 26px;}
+h5 {font-size: 22px;}
+h6 {font-size: 18px;}
+body, table.body, p, td {font-size: 15px;line-height:1.4;}
+
+p.lead, p.lede, p.leed {
+  font-size: 18px;
+  line-height:21px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+small {
+  font-size: 10px;
+}
+
+a {
+  color: #ff3844;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #2795b6 !important;
+}
+
+a:active {
+  color: #2795b6 !important;
+}
+
+a:visited {
+  color: #2ba6cb !important;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: #2ba6cb;
+}
+
+h1 a:active,
+h2 a:active,
+h3 a:active,
+h4 a:active,
+h5 a:active,
+h6 a:active {
+  color: #2ba6cb !important;
+}
+
+h1 a:visited,
+h2 a:visited,
+h3 a:visited,
+h4 a:visited,
+h5 a:visited,
+h6 a:visited {
+  color: #2ba6cb !important;
+}
+
+/* Panels */
+
+.panel {
+  background: #f2f2f2;
+  border: 1px solid #d9d9d9;
+  padding: 10px !important;
+}
+
+.sub-grid table {
+  width: 100%;
+}
+
+.sub-grid td.sub-columns {
+  padding-bottom: 0;
+}
+
+/* Buttons */
+
+table.button,
+table.tiny-button,
+table.small-button,
+table.medium-button,
+table.large-button {
+  width: 100%;
+  overflow: hidden;
+}
+
+table.button td,
+table.tiny-button td,
+table.small-button td,
+table.medium-button td,
+table.large-button td {
+  display: block;
+  width: auto !important;
+  text-align: center;
+  background: #2ba6cb;
+  border: 1px solid #2284a1;
+  color: #ffffff;
+  padding: 8px 0;
+}
+
+table.tiny-button td {
+  padding: 5px 0 4px;
+}
+
+table.small-button td {
+  padding: 8px 0 7px;
+}
+
+table.medium-button td {
+  padding: 12px 0 10px;
+}
+
+table.large-button td {
+  padding: 21px 0 18px;
+}
+
+table.button td a,
+table.tiny-button td a,
+table.small-button td a,
+table.medium-button td a,
+table.large-button td a {
+  font-weight: bold;
+  text-decoration: none;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+table.tiny-button td a {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+table.small-button td a {
+  font-size: 16px;
+}
+
+table.medium-button td a {
+  font-size: 20px;
+}
+
+table.large-button td a {
+  font-size: 24px;
+}
+
+table.button:hover td,
+table.button:visited td,
+table.button:active td {
+  background: #2795b6 !important;
+}
+
+table.button:hover td a,
+table.button:visited td a,
+table.button:active td a {
+  color: #fff !important;
+}
+
+table.button:hover td,
+table.tiny-button:hover td,
+table.small-button:hover td,
+table.medium-button:hover td,
+table.large-button:hover td {
+  background: #2795b6 !important;
+}
+
+table.button:hover td a,
+table.button:active td a,
+table.button td a:visited,
+table.tiny-button:hover td a,
+table.tiny-button:active td a,
+table.tiny-button td a:visited,
+table.small-button:hover td a,
+table.small-button:active td a,
+table.small-button td a:visited,
+table.medium-button:hover td a,
+table.medium-button:active td a,
+table.medium-button td a:visited,
+table.large-button:hover td a,
+table.large-button:active td a,
+table.large-button td a:visited {
+  color: #ffffff !important;
+}
+
+table.secondary td {
+  background: #e9e9e9;
+  border-color: #d0d0d0;
+  color: #555;
+}
+
+table.secondary td a {
+  color: #555;
+}
+
+table.secondary:hover td {
+  background: #d0d0d0 !important;
+  color: #555;
+}
+
+table.secondary:hover td a,
+table.secondary td a:visited,
+table.secondary:active td a {
+  color: #555 !important;
+}
+
+table.success td {
+  background: #5da423;
+  border-color: #457a1a;
+}
+
+table.success:hover td {
+  background: #457a1a !important;
+}
+
+table.alert td {
+  background: #c60f13;
+  border-color: #970b0e;
+}
+
+table.alert:hover td {
+  background: #970b0e !important;
+}
+
+table.radius td {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+table.round td {
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+  border-radius: 500px;
+}
+
+/* Outlook First */
+
+body.outlook p {
+  display: inline !important;
+}
+
+/*  Media Queries */
+
+@media only screen and (max-width: 700px) {
+
+  table[class="body"] img {
+    width: auto !important;
+    height: auto !important;
+  }
+
+  table[class="body"] center {
+    min-width: 0 !important;
+  }
+
+  table[class="body"] .container {
+    width: 95% !important;
+  }
+
+  table[class="body"] .row {
+    width: 100% !important;
+    display: block !important;
+  }
+
+  table[class="body"] .wrapper {
+    display: block !important;
+    padding-right: 0 !important;
+  }
+
+  table[class="body"] .columns,
+  table[class="body"] .column {
+    table-layout: fixed !important;
+    float: none !important;
+    width: 100% !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    display: block !important;
+  }
+
+  table[class="body"] .wrapper.first .columns,
+  table[class="body"] .wrapper.first .column {
+    display: table !important;
+  }
+
+  table[class="body"] table.columns td,
+  table[class="body"] table.column td {
+    width: 100% !important;
+  }
+
+  table[class="body"] .columns td.one,
+  table[class="body"] .column td.one { width: 8.333333% !important; }
+  table[class="body"] .columns td.two,
+  table[class="body"] .column td.two { width: 16.666666% !important; }
+  table[class="body"] .columns td.three,
+  table[class="body"] .column td.three { width: 25% !important; }
+  table[class="body"] .columns td.four,
+  table[class="body"] .column td.four { width: 33.333333% !important; }
+  table[class="body"] .columns td.five,
+  table[class="body"] .column td.five { width: 41.666666% !important; }
+  table[class="body"] .columns td.six,
+  table[class="body"] .column td.six { width: 50% !important; }
+  table[class="body"] .columns td.seven,
+  table[class="body"] .column td.seven { width: 58.333333% !important; }
+  table[class="body"] .columns td.eight,
+  table[class="body"] .column td.eight { width: 66.666666% !important; }
+  table[class="body"] .columns td.nine,
+  table[class="body"] .column td.nine { width: 75% !important; }
+  table[class="body"] .columns td.ten,
+  table[class="body"] .column td.ten { width: 83.333333% !important; }
+  table[class="body"] .columns td.eleven,
+  table[class="body"] .column td.eleven { width: 91.666666% !important; }
+  table[class="body"] .columns td.twelve,
+  table[class="body"] .column td.twelve { width: 100% !important; }
+
+  table[class="body"] td.offset-by-one,
+  table[class="body"] td.offset-by-two,
+  table[class="body"] td.offset-by-three,
+  table[class="body"] td.offset-by-four,
+  table[class="body"] td.offset-by-five,
+  table[class="body"] td.offset-by-six,
+  table[class="body"] td.offset-by-seven,
+  table[class="body"] td.offset-by-eight,
+  table[class="body"] td.offset-by-nine,
+  table[class="body"] td.offset-by-ten,
+  table[class="body"] td.offset-by-eleven {
+    padding-left: 0 !important;
+  }
+
+  table[class="body"] table.columns td.expander {
+    width: 1px !important;
+  }
+
+  table[class="body"] .right-text-pad,
+  table[class="body"] .text-pad-right {
+    padding-left: 10px !important;
+  }
+
+  table[class="body"] .left-text-pad,
+  table[class="body"] .text-pad-left {
+    padding-right: 10px !important;
+  }
+
+  table[class="body"] .hide-for-small,
+  table[class="body"] .show-for-desktop {
+    display: none !important;
+  }
+
+  table[class="body"] .show-for-small,
+  table[class="body"] .hide-for-desktop {
+    display: inherit !important;
+  }
+}
+
+  </style>
+  <style>
+  .header td {
+    text-align: center;
+  }
+
+  .subheader {
+    background: #4d4d4d;
+  }
+
+  .subheader td {
+    color: #fff;
+  }
+
+  .row.edicion .wrapper {
+    padding-top: 2px;
+  }
+
+  h2 {
+    border-bottom: 2px solid #B7B7B7;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  .row.separador td {
+    background: #f2f2f2;
+    padding: 1px 5px;
+  }
+
+  .row.coyuntura img {
+    width: auto;
+margin: 10px auto;
+float: none;
+  }
+
+  </style>
+</head>
+<body>
+	<table class="body">
+		<tr>
+			<td class="center" align="center" valign="top">
+        <center>
+
+          <br>
+
+          <table class="container">
+            <tr>
+              <td>
+
+                <!-- HEADER -->
+                <table class="row header">
+                  <tr>
+                    <td class="wrapper last">
+
+                      <table class="twelve columns">
+                        <tr>
+                          <td style="max-height: 105px; color: transparent; padding: 0; margin: 0;">
+                            <img style="margin: 0px" src="http://imgur.com/Ky9pOiS.jpg">
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                  </tr>
+                </table>
+                <!-- /HEADER -->
+
+                <!-- SUBHEADER -->
+                <table class="row subheader">
+                  <tr>
+                    <td class="wrapper">
+
+                      <table class="six columns">
+                        <tr>
+                          <td>
+
+                            <b>No.</b> 6
+
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                    <td class="wrapper last">
+
+                      <table class="six columns">
+                        <tr>
+                          <td class="last" style="text-align: right;">
+
+                            12 DE MARZO 2014
+
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                  </tr>
+                </table>
+                <!-- SUBHEADER -->
+
+                <!-- EDICION -->
+                <table class="row edicion" bgcolor="#e6e6e6">
+                  <tr>
+                    <td class="wrapper">
+
+                      <table class="two columns">
+                        <tr>
+                          <td class="edicion-cosa">
+                            <img style="margin: 1px 0 0 0" src="http://imgur.com/W2LB6L4.jpg">
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                    <td class="wrapper last">
+
+                      <table class="ten columns">
+                        <tr>
+                          <td style="line-height: 26px;color: #000; font-size: 20px; font-weight: bold;padding: 0;">
+                            <span style="color:#cc0000">Empoderamiento del consumidor</span> | <span style="color:#f15a24">Coyuntura</span> | <span style="color:#0071bc">Materiales Estrate&#769;gicos</span><br/>
+                            | <span style="color:#663333">Estatus Legislativo</span> | <span style="color:#990066">Asuntos Generales</span>
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+
+                  </tr>
+                </table>
+                <!-- /EDICION -->
+
+                <!-- EDITORIAL -->
+                <table class="row editorial">
+                  <tr>
+
+                    <td class="wrapper last">
+
+                      <table class="twelve columns">
+                        <tr>
+                          <td>
+														<img style="width: auto; float: left; margin: 0 20px 20px 0;" class="center" src="http://puu.sh/7t41Q.png">
+														Inicia el tercer mes del a&ntilde;o con una tendencia creciente en el fortalecimiento de pol&iacute;ticas p&uacute;blicas restrictivas en la regi&oacute;n. Es momento de multiplicar los esfuerzos para equilibrar el debate p&uacute;blico y construir una opini&oacute;n balanceada que blinde la reputaci&oacute;n de nuestra Compa&ntilde;&iacute;a y de la categor&iacute;a, con base en evidencia cient&iacute;fica que d&eacute; fuerza a nuestra argumentaci&oacute;n. <br />
+														La Organizaci&oacute;n Mundial de Salud inici&oacute; una Consulta P&uacute;blica internacional para actualizar su recomendaci&oacute;n respecto a la ingesta diaria del consumo de az&uacute;car y bajarla de 10 a 5% por adulto, es decir el equivalente a 30 gramos. Autoridades de todos los niveles, as&iacute; como funcionarios de organismos multilaterales podr&iacute;an ser sensibles a esta consulta, opinar o generar propuestas regulatorias provocando un cambio desfavorable para nuestra categor&iacute;a. Reforzar las acciones de nuestra Campa&ntilde;a, adelantarnos a nuestros cr&iacute;ticos, tener un monitoreo puntual ser&aacute; fundamental para incidir en el debate. <br />
+														En la regi&oacute;n se han registrado 42 impactos. Si bien la informaci&oacute;n todav&iacute;a no es relevante, podr&iacute;a crecer en los pr&oacute;ximos d&iacute;as, sobre todo cuando se acerca la fecha del t&eacute;rmino de la consulta. <br />
+														El 15 de marzo tenemos una efem&eacute;ride importante: la celebraci&oacute;n del D&iacute;a Mundial de los Derechos del Consumidor, que en algunos pa&iacute;ses --como en Brasil y M&eacute;xico-- ha adquirido gran fuerza. <br />
+														Se esperan diferentes manifestaciones organizadas, en muchos casos, por nuestros cr&iacute;ticos. &Eacute;stos usualmente logran importante presencia de la agenda de la jornada, argumentando defender la libre elecci&oacute;n del consumidor pero en muchos casos, en otros temas, impulsan la aplicaci&oacute;n de pol&iacute;ticas p&uacute;blicas restrictivas. <br />
+														Para dar seguimiento a las acciones de la Campa&ntilde;a 360&deg; de Category Leadership para Am&eacute;rica Latina, la efem&eacute;ride es una oportunidad para posicionar la discusi&oacute;n respecto al &ldquo;empoderamiento del consumidor&rdquo;, a trav&eacute;s de ejercer su derecho de libre elecci&oacute;n con base a estar informado. La premisa para nosotros es informaci&oacute;n antes que prohibici&oacute;n. <br />
+														Como ustedes saben, para fortalecer o mejorar las acciones emprendidas como equipo es indispensable tener una base s&oacute;lida y contar con sus reportes basados en las m&eacute;tricas que hemos venido trabajando y compartiendo con ustedes. El Sistema de Monitoreo y Evaluaci&oacute;n de nuestra Campa&ntilde;a es un importante instrumento de medici&oacute;n, una br&uacute;jula, que nos orientar&aacute; para realizar los ajustes necesarios y alcanzar los objetivos estrat&eacute;gicos. <br />
+														Asimismo, queremos invitarlos que nos provean de su retroalimentaci&oacute;n respecto a los textos elaborados por el Content Creation Hub para realizar los ajustes pertinentes y contar con contenidos que funcionen mejor para las circunstancias de cada uno. Tambi&eacute;n estar&aacute;n para consulta todos aquellos documentos, estudios, papers que durante la &uacute;ltima quincena est&eacute;n relacionados con los temas previstos en nuestra Campa&ntilde;a. <br />
+
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+
+                  </tr>
+                </table>
+                <!-- /EDITORIAL -->
+
+                <!-- SEPARADOR: COYUNTURA -->
+                <table class="row separador">
+                  <tr>
+                    <td class="wrapper last">
+
+                      <table class="twelve columns">
+                        <tr>
+                          <td>
+                            &nbsp;
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                  </tr>
+                </table>
+                <!-- /SEPARADOR COYUNTURA -->
+
+               <!-- COYUNTURA -->
+                <table class="row coyuntura">
+                  <tr>
+                    <td class="wrapper">
+
+                      <table class="six columns">
+                        <tr>
+                          <td>
+
+                            <h2><span style="color:#ba0412">Empoderamiento del consumidor</span></h2>
+                            <center><img src="http://imgur.com/Fk1mMYx.png" style="display: block"></center>
+                            En determinadas esferas de opini&oacute;n se sabe que los gobiernos deben encauzar sus acciones en fortalecer la competencia y resguardar los derechos de los consumidores. As&iacute; lo disponen las Directrices de Naciones Unidas sobre protecci&oacute;n del Consumidor suscritas en 1985 y actualizadas en 1999. Los derechos del consumidor son fundamentales para que pueda elegir lo mejor de acuerdo a su circunstancia y en el fortalecimiento de la ciudadan&iacute;a, lo que empodera al consumidor.<br />
+														Aunque son derechos impl&iacute;citos de segunda y tercera generaci&oacute;n, dar a conocer &eacute;stos como una forma de empoderamiento de los individuos y su capacidad de elecci&oacute;n contribuye a generar en la Opini&oacute;n P&uacute;blica una posici&oacute;n cr&iacute;tica acerca de la tendencia de muchos gobiernos de regular indiscriminadamente diversos sectores. Como mencionamos en el editorial de hoy, el el D&iacute;a Mundial de los Derechos del Consumidor nos da una oportunidad para posicionar informaci&oacute;n que fomente la toma de conciencia sobre los derechos del consumidor y con ello mirar con un ojo m&aacute;s cr&iacute;tico las pol&iacute;ticas p&uacute;blicas restrictivas. <br />
+														Asimismo, en marzo tenemos dos oportunidades sobresalientes, el D&iacute;a Internacional de la Mujer, que se celebra el 8 de marzo y el D&iacute;a Mundial del Agua, el 22. <br />
+														La celebraci&oacute;n a la Mujer tiene su origen en el impulso y resguardo de la equidad de g&eacute;nero: iguales oportunidades, mayores posibilidades de las mujeres. Sin embargo, tambi&eacute;n tiene mayores alcances debido al rol esencial de las mujeres en las sociedades. Es posible posicionar en el debate diferentes textos sobre el liderazgo natural de las mujeres en el hogar como tomadoras de decisiones, creadora de valores y promotora de estilos de vida saludables. As&iacute; como relacionados con el balance energ&eacute;tico, aspectos multifuncionales de la obesidad, sedentarismo, entre otros. <br />
+														En el caso del D&iacute;a Mundial del Agua hay acciones espec&iacute;ficas en materia de sustentabilidad que integran la estrategia de Company Brand PR por lo que no ahondaremos en ellas en este Update.<br />
+														Los invitamos a revisar todos los textos en:<br />
+                            <a href="goo.gl/ihbYJc">goo.gl/ihbYJc</a>
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+												<tr>
+													<td>
+
+														<h2><span style="color:#ba0412">Mejores pra&#769;cticas</span></h2>
+														<center><img src="http://imgur.com/wQSd8OR.png" style="display: block"></center>
+														Seguimos impulsando este espacio mensual enfocado en compartir buenas pr&aacute;cticas. En esta ocasi&oacute;n Brasil nos compartir&aacute; su experiencia en torno a la construcci&oacute;n de coaliciones y acuerdos con instituciones, entre otros. <br />
+Los invitamos a que cada BU presente las acciones emprendidas que han obtenido resultados satisfactorios en el marco de nuestra campa&ntilde;a. Para hacerlo, cada BU deber&aacute; enviar a <a href="mailto:categorylatam@cepol.com.mx">categorylatam@cepol.com.mx</a> el tema propuesto y un p&aacute;rrafo explicando cu&aacute;les son los resultados obtenidos que justifican considerar la actividad una <i>best practice</i>.
+													</td>
+													<td class="expander"></td>
+												</tr>
+                      </table>
+
+                    </td>
+                    <td class="wrapper last">
+
+                      <table class="six columns">
+                        <tr>
+                          <td>
+
+                            <h2><span style="color:#f15a24">Coyuntura</span></h2>
+														La Organizaci&oacute;n Mundial de la Salud (OMS) dio a conocer que llevar&aacute; a cabo una consulta p&uacute;blica acerca de su proyecto de directrices sobre la ingesta de az&uacute;cares con la intenci&oacute;n de recomendar a los gobiernos sobre c&oacute;mo reducir la obesidad y la caries dental. La Consulta est&aacute; vigente del 5 al 31 de marzo.<br />
+														La actual recomendaci&oacute;n de la OMS es del 2002 y se&ntilde;ala que el consumo de az&uacute;cares debe representar menos de 10% de la ingesta cal&oacute;rica total diaria. El nuevo proyecto de directrices formula la misma recomendaci&oacute;n, pero adem&aacute;s indica que si la ingesta cal&oacute;rica total diaria se reduce a 5% se obtendr&aacute;n beneficios adicionales, espec&iacute;ficamente se previene obesidad y caries. <br />
+														Por otro lado, mientras el gobierno del presidente Barack Obama anunci&oacute; la disminuci&oacute;n de 43% del n&uacute;mero de ni&ntilde;os obesos entre los dos y los cinco a&ntilde;os en Estados Unidos, la OMS advirti&oacute; que en Europa este indicador va en crecimiento. <br />
+														<br />
+														La OMS se&ntilde;al&oacute; que Europa debe estar atenta en la epidemia de la obesidad. De acuerdo con el organismo, la pasividad f&iacute;sica y la dieta con un alto contenido de grasas, sal y az&uacute;car condujeron a que 27 % de los ni&ntilde;os europeos de trece a&ntilde;os y 33 % de once a&ntilde;os padezcan exceso de peso. Por esa raz&oacute;n la organizaci&oacute;n sugiere que los gobiernos deben endurecer las leyes e insistir en un etiquetado informativo de los productos y regular la publicidad y el marketing, &ldquo;obligando a la industria de la alimentaci&oacute;n a asumir su responsabilidad&rdquo;.<br />
+														<br />
+														El gobierno estadounidense reconoci&oacute;, sin embargo, que la obesidad no se ha movido en adultos, donde los indicadores siguen siendo alarmantes. Michelle Obama mantiene la campa&ntilde;a Let&acute;s Move, en la cual educa a padres y a ni&ntilde;os sobre la importancia de comer sano y practicar ejercicio de manera rutinaria. En ese sentido, hay que estar atentos a estas campa&ntilde;as de combate y prevenci&oacute;n de la obesidad observen la problem&aacute;tica de una forma multifactorial que ayude a equilibrar el debate. <br />
+														El Foro Iberoamericano de Obesidad que convoc&oacute; el Gobierno del Distrito Federal durante el 26 al 28 de febrero en la ciudad de M&eacute;xico tuvo una participaci&oacute;n de organizaciones relevantes como: UAM, SANOFI, Latin American Obesity Forum, Fundaci&oacute;n Franco-Mexicana para la Medicina, Am&eacute;rica vs Obesidad.org y UCLG Committee for Urban Health. <br />
+														El foro cont&oacute; con la participaci&oacute;n de Gabriel Jaime Garin Alzate, secretario de Salud de Medell&iacute;n, Gloria Ag&uuml;ero Blas, Subgerente de Vigilancia Sanitaria de la Municipalidad de Lima, Giane Alves Oliveira, quien dio a conocer el programa de la construcci&oacute;n de una l&iacute;nea de cuidados del sobrepeso y obesidad en la ciudad de Sao Paulo y Richard Visser, ministro de Salud y Deporte de Aruba, entre otros. <br />
+														Asistieron 350 personas entre estudiantes, m&eacute;dicos, y p&uacute;blico interesado en temas de salud, teniendo una buena cobertura en televisi&oacute;n abierta (Televisa y TV Azteca). Armando Barriguete, presidente de EPODE Red Internacional Acuerdos y Compromisos, dio a conocer las siguientes conclusiones:
+														<ul>
+															<li>La obesidad es un problema de salud pública multifactorial.</li>
+															<li>La participación política de la ciudadanía debe promover los cambios.</li>
+															<li>Se acordó la promoción de programas exitosos de Europa y América Latina.</li>
+															<li>Se elaborará una base de datos de los programas para el combate a la obesidad existentes en América Latina. </li>
+														</ul>
+														El monitoreo en la regio&#769;n de las posibles repercusiones del Foro Iberoamericano de Obesidad es necesario para medir su trascendencia en otros pai&#769;ses y seguir la agenda que pudieran impulsar los participantes.<br/><br/>
+														En la siguiente liga encontrarán más detalles de los pormenores de este foro.<br/>
+														<a href="goo.gl/bPcSOU">goo.gl/bPcSOU</a>
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+
+                  </tr>
+                </table>
+                <!-- /COYUNTURA -->
+
+                <!-- SEPARADOR: ESTATUS -->
+                <table class="row separador">
+                  <tr>
+                    <td class="wrapper last">
+
+                      <table class="twelve columns">
+                        <tr>
+                          <td>&nbsp;
+                          </td>
+                          <td class="expander"></>
+                        </tr>
+                      </table>
+
+                    </td>
+                  </tr>
+                </table>
+                <!-- /SEPARADOR: ESTATUS -->
+
+               <!-- ESTATUS -->
+                <table class="row estatus">
+                  <tr>
+                    <td class="wrapper">
+
+                      <table class="eight columns">
+                        <tr>
+                          <td>
+                            <h2><span style="color:#0071bc">Materiales Estrate&#769;gicos</span></h2>
+														Hemos recibido su retroalimentaci&oacute;n respecto a diversos documentos que les dimos a conocer, en ese sentido ustedes podr&aacute;n consultar en el Share Point de Category Leadership la actualizaci&oacute;n de:
+														<ul>
+                              <li>Directorio de voceros</li>
+                              <li>Mapas de Actores</li>
+                              <li>Congresos</li>
+                            </ul>
+                            Asimismo, podra&#769;n consultar:<br />
+                            <ul>
+                              <li>Reporte del Foro Iberoamericano de Obesidad que el Gobierno del Distrito Federal</li>
+                              <li>Directrices de Naciones Unidas sobre Protecci&oacute;n del Consumidor</li>
+                            </ul>
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                    <td class="wrapper last">
+
+                      <table class="four columns">
+                        <tr>
+                          <td>
+
+                            <img src="http://imgur.com/3EZTx0N.png">
+
+
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+
+                  </tr>
+                </table>
+                <!-- /ESTATUS -->
+
+                <!-- SEPARADOR: NOVEDADES -->
+                <table class="row separador">
+                  <tr>
+                    <td class="wrapper last">
+
+                      <table class="twelve columns">
+                        <tr>
+                          <td>
+													&nbsp;
+													</td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                  </tr>
+                </table>
+                <!-- /SEPARADOR: NOVEDADES -->
+
+
+
+
+                <!-- NOVEDADES -->
+                <table class="row coyuntura">
+                  <tr>
+                    <td class="wrapper last">
+
+                      <table class="twelve columns">
+                        <tr>
+                          <td>
+
+                            <img style="float:left; margin: 10px 20px 20px 0;" src="http://i.imgur.com/EHZccYg.png">
+														<h2><span style="color:#663333">Estatus Legislativo</span></h2>
+														El 1 de marzo entr&oacute; en vigor Plan de Combate a la obesidad y la diabetes en M&eacute;xico. Este plan est&aacute; integrado por tres pilares: salud p&uacute;blica, atenci&oacute;n m&eacute;dica oportuna, y regulaci&oacute;n sanitaria y pol&iacute;tica fiscal a favor de la salud. En ese sentido, el gobierno har&aacute; una promoci&oacute;n de estilos de vida saludable, amplias campa&ntilde;as de promoci&oacute;n a la salud de la educaci&oacute;n, monitoreo permanente de las enfermedades no transmisibles, as&iacute; como la implementaci&oacute;n de acciones preventivas. Adem&aacute;s se crear&aacute; un observatorio encabezado por la Secretar&iacute;a de Salud, &ldquo;un mecanismo que permita generar informaci&oacute;n para una adecuada toma de decisiones en contra de la obesidad y la diabetes&rdquo;. <br />
+														En Estados Unidos se anunci&oacute; que el pr&oacute;ximo a&ntilde;o escolar entrar&aacute;n en vigor las nuevas reglas de publicidad y consumo de alimentos y bebidas como parte &#160;de la campa&ntilde;a de combate a la obesidad Let&acute;s Move. La nueva reglamentaci&oacute;n tiene por objeto que en las escuelas de toda la Uni&oacute;n Americana se impongan l&iacute;mites a los anuncios publicitarios de los alimentos denominados &quot;chatarra&quot;.&#160;<br />
+														El Departamento de Agricultura&#160;exigir&aacute;, adem&aacute;s, que todos los alimentos y bebidas que se vendan en las escuelas, incluidos los de las m&aacute;quinas expendedoras, cumplan al menos uno de los siguientes requisitos: Contener cereales integrales, tener como principal ingrediente una fruta, verdura o prote&iacute;na, o aportar el 10% de la cantidad diaria recomendada de calcio, vitamina D y fibra. Asimismo, se actualizar&aacute;n los est&aacute;ndares sobre las calor&iacute;as, el contenido en grasa, el sodio y el az&uacute;car de las comidas y bebidas vendidas en los centros escolares.<br />
+														Lo anterior tendr&aacute; un fuerte impacto en la regi&oacute;n y de inmediato en Puerto Rico. <br />
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+
+
+                  </tr>
+                </table>
+                <!-- /NOVEDADES -->
+
+
+                <!-- SEPARADOR: ASUNTOS -->
+                <table class="row separador">
+                  <tr>
+                    <td class="wrapper last">
+
+                      <table class="twelve columns">
+                        <tr>
+                          <td>
+                            &nbsp;
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                  </tr>
+                </table>
+                <!-- /SEPARADOR: ASUNTOS -->
+
+               <!-- NUEVA RUTINA -->
+                <table class="row rutina">
+                  <tr>
+                    <td class="wrapper">
+
+                      <table class="eight columns">
+                        <tr>
+                          <td>
+                            <h2><span style="color:#990066">Asuntos Generales</span></h2>
+
+														El 14 de marzo llevaremos a cabo la quinta reuni&oacute;n quincenal de la Campa&ntilde;a 360&deg; de Category Leadership para Am&eacute;rica Latina. El horario ser&aacute; de 11:30 a 13:00, hora de M&eacute;xico y Centroam&eacute;rica, en formato de call y webex.<br />
+														Aqu&iacute; puedes consultar la agenda de la reuni&oacute;n: <br />
+                            <ul>
+                              <li>Update PAC LAG<br /></li>
+															<li>Mejores pra&#769;cticas: Brasil</li>
+                              <li>Update de PAC de cada BU</li>
+                              <ul>
+                                <li>Cobertura medi&aacute;tica</li>
+                                <li>Sistema de m&eacute;tricas</li>
+                                <li>Necesidades</li>
+                                <li>Reporte de coyuntura</li>
+                              </ul>
+                            </ul>
+                            <ul>
+                              <li>Pro&#769;ximas acciones</li>
+                              <ul>
+                                <li>Esperamos que todas las BU's que este&#769;n listas comiencen a cargar en la base de datos del Sistema de Monitoreo y Evaluacio&#769;n de la Campan&#771;a 360&deg; de Category Leadership para Ame&#769;rica Latina sus reportes de enero y febrero.</li>
+                              </ul>
+                            </ul>
+
+
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                    <td class="wrapper last">
+
+                      <table class="four columns">
+                        <tr>
+                          <td>
+
+                            <img style="margin-top: 50px;" src="http://puu.sh/7t3xo.png">
+
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+
+                  </tr>
+                </table>
+                <!-- /NUEVA RUTINA -->
+
+
+                <!-- FOOTER -->
+                <table class="row header">
+                  <tr>
+                    <td class="wrapper last">
+
+                      <table class="twelve columns">
+                        <tr>
+                          <td style="height: 50px; background: #4d4d4d; color: #fff;padding: 15px 0 0;
+font-size: 11px;">
+<center>Este documento es s&oacute;lo para <b>USO INTERNO Y CONFIDENCIAL</b>. Su difusi&oacute;n, distribuci&oacute;n, retransmisi&oacute;n, copia de cualquier tipo, est&aacute; prohibida y sujeta a las penalidades establecidas en las leyes y c&oacute;digos relevantes.</center>
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                  </tr>
+                </table>
+                <!-- FOOTER -->
+
+                <!-- container end below -->
+              </td>
+            </tr>
+          </table>
+
+        </center>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

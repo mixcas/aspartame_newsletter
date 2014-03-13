@@ -1,0 +1,1180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width"/>
+	<style>
+/**********************************************
+* Ink v1.0.5 - Copyright 2013 ZURB Inc        *
+**********************************************/
+
+/* Client-specific Styles & Reset */
+
+#outlook a { 
+  padding:0; 
+} 
+
+body{ 
+  width:100% !important; 
+  min-width: 100%;
+  -webkit-text-size-adjust:100%; 
+  -ms-text-size-adjust:100%; 
+  margin:0; 
+  padding:0;
+}
+
+.ExternalClass { 
+  width:100%;
+} 
+
+.ExternalClass, 
+.ExternalClass p, 
+.ExternalClass span, 
+.ExternalClass font, 
+.ExternalClass td, 
+.ExternalClass div { 
+  line-height: 100%; 
+} 
+
+#backgroundTable { 
+  margin:0; 
+  padding:0; 
+  width:100% !important; 
+  line-height: 100% !important; 
+}
+
+img { 
+  outline:none; 
+  text-decoration:none; 
+  -ms-interpolation-mode: bicubic;
+  width: 100%;
+  max-width: 100%; 
+  float: left; 
+  clear: both; 
+  display: block;
+  margin-bottom: 15px;
+}
+
+center {
+  width: 100%;
+  min-width: 850px;
+}
+
+a img { 
+  border: none;
+}
+
+p {
+  margin: 0 0 0 10px;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+td { 
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  border-collapse: collapse !important; 
+}
+
+table, tr, td {
+  padding: 0;
+  vertical-align: top;
+  text-align: left;
+}
+
+hr {
+  color: #d9d9d9; 
+  background-color: #d9d9d9; 
+  height: 1px; 
+  border: none;
+}
+
+/* Responsive Grid */
+
+table.body {
+  height: 100%;
+  width: 100%;
+}
+
+table.container {
+  width: 850px;
+  margin: 0 auto;
+  text-align: inherit;
+}
+
+table.row { 
+  padding: 0px; 
+  width: 100%;
+  position: relative;
+}
+
+table.container table.row {
+  display: block;
+}
+
+td.wrapper {
+  padding: 10px 20px 0px 0px;
+  position: relative;
+}
+
+table.columns,
+table.column {
+  margin: 0 auto;
+}
+
+table.columns td,
+table.column td {
+  padding: 0px 0px 10px; 
+}
+
+table.columns td.sub-columns,
+table.column td.sub-columns,
+table.columns td.sub-column,
+table.column td.sub-column {
+  padding-right: 10px;
+}
+
+td.sub-column, td.sub-columns {
+  min-width: 0px;
+}
+
+table.row td.last,
+table.container td.last {
+  padding-right: 0px;
+}
+
+table.one { width: 30px; }
+table.two { width: 80px; }
+table.three { width: 130px; }
+table.four { width: 273px; }
+table.five { width: 230px; }
+table.six { width: 415px; }
+table.seven { width: 330px; }
+table.eight { width: 566px; }
+table.nine { width: 430px; }
+table.ten { width: 708px; }
+table.eleven { width: 530px; }
+table.twelve { width: 860px; }
+
+table.one center { min-width: 30px; }
+table.two center { min-width: 80px; }
+table.three center { min-width: 130px; }
+table.four center { min-width: 283px; }
+table.five center { min-width: 230px; }
+table.six center { min-width: 425px; }
+table.seven center { min-width: 330px; }
+table.eight center { min-width: 566px; }
+table.nine center { min-width: 430px; }
+table.ten center { min-width: 480px; }
+table.eleven center { min-width: 530px; }
+table.twelve center { min-width: 850px; }
+
+table.one .panel center { min-width: 10px; }
+table.two .panel center { min-width: 60px; }
+table.three .panel center { min-width: 110px; }
+table.four .panel center { min-width: 160px; }
+table.five .panel center { min-width: 210px; }
+table.six .panel center { min-width: 260px; }
+table.seven .panel center { min-width: 310px; }
+table.eight .panel center { min-width: 360px; }
+table.nine .panel center { min-width: 410px; }
+table.ten .panel center { min-width: 460px; }
+table.eleven .panel center { min-width: 510px; }
+table.twelve .panel center { min-width: 560px; }
+
+.body .columns td.one,
+.body .column td.one { width: 8.333333%; }
+.body .columns td.two,
+.body .column td.two { width: 16.666666%; }
+.body .columns td.three,
+.body .column td.three { width: 25%; }
+.body .columns td.four,
+.body .column td.four { width: 33.333333%; }
+.body .columns td.five,
+.body .column td.five { width: 41.666666%; }
+.body .columns td.six,
+.body .column td.six { width: 50%; }
+.body .columns td.seven,
+.body .column td.seven { width: 58.333333%; }
+.body .columns td.eight,
+.body .column td.eight { width: 66.666666%; }
+.body .columns td.nine,
+.body .column td.nine { width: 75%; }
+.body .columns td.ten,
+.body .column td.ten { width: 83.333333%; }
+.body .columns td.eleven,
+.body .column td.eleven { width: 91.666666%; }
+.body .columns td.twelve,
+.body .column td.twelve { width: 100%; }
+
+td.offset-by-one { padding-left: 50px; }
+td.offset-by-two { padding-left: 100px; }
+td.offset-by-three { padding-left: 150px; }
+td.offset-by-four { padding-left: 200px; }
+td.offset-by-five { padding-left: 250px; }
+td.offset-by-six { padding-left: 300px; }
+td.offset-by-seven { padding-left: 350px; }
+td.offset-by-eight { padding-left: 400px; }
+td.offset-by-nine { padding-left: 450px; }
+td.offset-by-ten { padding-left: 500px; }
+td.offset-by-eleven { padding-left: 550px; }
+
+td.expander {
+  visibility: hidden;
+  width: 0px;
+  padding: 0 !important;
+}
+
+table.columns .text-pad,
+table.column .text-pad {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+table.columns .left-text-pad,
+table.columns .text-pad-left,
+table.column .left-text-pad,
+table.column .text-pad-left {
+  padding-left: 10px;
+}
+
+table.columns .right-text-pad,
+table.columns .text-pad-right,
+table.column .right-text-pad,
+table.column .text-pad-right {
+  padding-right: 10px;
+}
+
+/* Block Grid */
+
+.block-grid {
+  width: 100%;
+  max-width: 850px;
+}
+
+.block-grid td {
+  display: inline-block;
+  padding:10px;
+}
+
+.two-up td {
+  width:270px;
+}
+
+.three-up td {
+  width:173px;
+}
+
+.four-up td {
+  width:125px;
+}
+
+.five-up td {
+  width:96px;
+}
+
+.six-up td {
+  width:76px;
+}
+
+.seven-up td {
+  width:62px;
+}
+
+.eight-up td {
+  width:52px;
+}
+
+/* Alignment & Visibility Classes */
+
+table.center, td.center {
+  text-align: center;
+}
+
+h1.center,
+h2.center,
+h3.center,
+h4.center,
+h5.center,
+h6.center {
+  text-align: center;
+}
+
+span.center {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+img.center {
+  margin: 0 auto;
+  float: none;
+}
+
+.show-for-small,
+.hide-for-desktop {
+  display: none;
+}
+
+/* Typography */
+
+body, table.body, h1, h2, h3, h4, h5, h6, p, td { 
+  color: #4d4d4d;
+  font-family: "Helvetica", "Arial", sans-serif; 
+  font-weight: normal; 
+  padding:0; 
+  margin: 0;
+  text-align: left; 
+  line-height: 1.3;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  word-break: normal;
+}
+
+h1 {font-size: 40px;}
+h2 {font-size: 34px;}
+h3 {font-size: 30px;}
+h4 {font-size: 26px;}
+h5 {font-size: 22px;}
+h6 {font-size: 18px;}
+body, table.body, p, td {font-size: 15px;line-height:1.4;}
+
+p.lead, p.lede, p.leed {
+  font-size: 18px;
+  line-height:21px;
+}
+
+p { 
+  margin-bottom: 10px;
+}
+
+small {
+  font-size: 10px;
+}
+
+a {
+  color: #ff3844; 
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover { 
+  color: #2795b6 !important;
+}
+
+a:active { 
+  color: #2795b6 !important;
+}
+
+a:visited { 
+  color: #2ba6cb !important;
+}
+
+h1 a, 
+h2 a, 
+h3 a, 
+h4 a, 
+h5 a, 
+h6 a {
+  color: #2ba6cb;
+}
+
+h1 a:active, 
+h2 a:active,  
+h3 a:active, 
+h4 a:active, 
+h5 a:active, 
+h6 a:active { 
+  color: #2ba6cb !important; 
+} 
+
+h1 a:visited, 
+h2 a:visited,  
+h3 a:visited, 
+h4 a:visited, 
+h5 a:visited, 
+h6 a:visited { 
+  color: #2ba6cb !important; 
+} 
+
+/* Panels */
+
+.panel {
+  background: #f2f2f2;
+  border: 1px solid #d9d9d9;
+  padding: 10px !important;
+}
+
+.sub-grid table {
+  width: 100%;
+}
+
+.sub-grid td.sub-columns {
+  padding-bottom: 0;
+}
+
+/* Buttons */
+
+table.button,
+table.tiny-button,
+table.small-button,
+table.medium-button,
+table.large-button {
+  width: 100%;
+  overflow: hidden;
+}
+
+table.button td,
+table.tiny-button td,
+table.small-button td,
+table.medium-button td,
+table.large-button td {
+  display: block;
+  width: auto !important;
+  text-align: center;
+  background: #2ba6cb;
+  border: 1px solid #2284a1;
+  color: #ffffff;
+  padding: 8px 0;
+}
+
+table.tiny-button td {
+  padding: 5px 0 4px;
+}
+
+table.small-button td {
+  padding: 8px 0 7px;
+}
+
+table.medium-button td {
+  padding: 12px 0 10px;
+}
+
+table.large-button td {
+  padding: 21px 0 18px;
+}
+
+table.button td a,
+table.tiny-button td a,
+table.small-button td a,
+table.medium-button td a,
+table.large-button td a {
+  font-weight: bold;
+  text-decoration: none;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+table.tiny-button td a {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+table.small-button td a {
+  font-size: 16px;
+}
+
+table.medium-button td a {
+  font-size: 20px;
+}
+
+table.large-button td a {
+  font-size: 24px;
+}
+
+table.button:hover td,
+table.button:visited td,
+table.button:active td {
+  background: #2795b6 !important;
+}
+
+table.button:hover td a,
+table.button:visited td a,
+table.button:active td a {
+  color: #fff !important;
+}
+
+table.button:hover td,
+table.tiny-button:hover td,
+table.small-button:hover td,
+table.medium-button:hover td,
+table.large-button:hover td {
+  background: #2795b6 !important;
+}
+
+table.button:hover td a,
+table.button:active td a,
+table.button td a:visited,
+table.tiny-button:hover td a,
+table.tiny-button:active td a,
+table.tiny-button td a:visited,
+table.small-button:hover td a,
+table.small-button:active td a,
+table.small-button td a:visited,
+table.medium-button:hover td a,
+table.medium-button:active td a,
+table.medium-button td a:visited,
+table.large-button:hover td a,
+table.large-button:active td a,
+table.large-button td a:visited {
+  color: #ffffff !important; 
+}
+
+table.secondary td {
+  background: #e9e9e9;
+  border-color: #d0d0d0;
+  color: #555;
+}
+
+table.secondary td a {
+  color: #555;
+}
+
+table.secondary:hover td {
+  background: #d0d0d0 !important;
+  color: #555;
+}
+
+table.secondary:hover td a,
+table.secondary td a:visited,
+table.secondary:active td a {
+  color: #555 !important;
+}
+
+table.success td {
+  background: #5da423;
+  border-color: #457a1a;
+}
+
+table.success:hover td {
+  background: #457a1a !important;
+}
+
+table.alert td {
+  background: #c60f13;
+  border-color: #970b0e;
+}
+
+table.alert:hover td {
+  background: #970b0e !important;
+}
+
+table.radius td {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+table.round td {
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+  border-radius: 500px;
+}
+
+/* Outlook First */
+
+body.outlook p {
+  display: inline !important;
+}
+
+/*  Media Queries */
+
+@media only screen and (max-width: 700px) {
+
+  table[class="body"] img {
+    width: auto !important;
+    height: auto !important;
+  }
+
+  table[class="body"] center {
+    min-width: 0 !important;
+  }
+
+  table[class="body"] .container {
+    width: 95% !important;
+  }
+
+  table[class="body"] .row {
+    width: 100% !important;
+    display: block !important;
+  }
+
+  table[class="body"] .wrapper {
+    display: block !important;
+    padding-right: 0 !important;
+  }
+
+  table[class="body"] .columns,
+  table[class="body"] .column {
+    table-layout: fixed !important;
+    float: none !important;
+    width: 100% !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    display: block !important;
+  }
+
+  table[class="body"] .wrapper.first .columns,
+  table[class="body"] .wrapper.first .column {
+    display: table !important;
+  }
+
+  table[class="body"] table.columns td,
+  table[class="body"] table.column td {
+    width: 100% !important;
+  }
+
+  table[class="body"] .columns td.one,
+  table[class="body"] .column td.one { width: 8.333333% !important; }
+  table[class="body"] .columns td.two,
+  table[class="body"] .column td.two { width: 16.666666% !important; }
+  table[class="body"] .columns td.three,
+  table[class="body"] .column td.three { width: 25% !important; }
+  table[class="body"] .columns td.four,
+  table[class="body"] .column td.four { width: 33.333333% !important; }
+  table[class="body"] .columns td.five,
+  table[class="body"] .column td.five { width: 41.666666% !important; }
+  table[class="body"] .columns td.six,
+  table[class="body"] .column td.six { width: 50% !important; }
+  table[class="body"] .columns td.seven,
+  table[class="body"] .column td.seven { width: 58.333333% !important; }
+  table[class="body"] .columns td.eight,
+  table[class="body"] .column td.eight { width: 66.666666% !important; }
+  table[class="body"] .columns td.nine,
+  table[class="body"] .column td.nine { width: 75% !important; }
+  table[class="body"] .columns td.ten,
+  table[class="body"] .column td.ten { width: 83.333333% !important; }
+  table[class="body"] .columns td.eleven,
+  table[class="body"] .column td.eleven { width: 91.666666% !important; }
+  table[class="body"] .columns td.twelve,
+  table[class="body"] .column td.twelve { width: 100% !important; }
+
+  table[class="body"] td.offset-by-one,
+  table[class="body"] td.offset-by-two,
+  table[class="body"] td.offset-by-three,
+  table[class="body"] td.offset-by-four,
+  table[class="body"] td.offset-by-five,
+  table[class="body"] td.offset-by-six,
+  table[class="body"] td.offset-by-seven,
+  table[class="body"] td.offset-by-eight,
+  table[class="body"] td.offset-by-nine,
+  table[class="body"] td.offset-by-ten,
+  table[class="body"] td.offset-by-eleven {
+    padding-left: 0 !important;
+  }
+
+  table[class="body"] table.columns td.expander {
+    width: 1px !important;
+  }
+
+  table[class="body"] .right-text-pad,
+  table[class="body"] .text-pad-right {
+    padding-left: 10px !important;
+  }
+
+  table[class="body"] .left-text-pad,
+  table[class="body"] .text-pad-left {
+    padding-right: 10px !important;
+  }
+
+  table[class="body"] .hide-for-small,
+  table[class="body"] .show-for-desktop {
+    display: none !important;
+  }
+
+  table[class="body"] .show-for-small,
+  table[class="body"] .hide-for-desktop {
+    display: inherit !important;
+  }
+}
+
+  </style>
+  <style>
+  .header td {
+    text-align: center;
+  }
+
+  .subheader {
+    background: #4d4d4d;
+  }
+
+  .subheader td {
+    color: #fff;
+  }
+
+  .row.edicion .wrapper {
+    padding-top: 2px;
+  }
+  
+  h2 {
+    border-bottom: 2px solid #B7B7B7;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  .row.separador td {
+    background: #f2f2f2;
+    padding: 1px 5px;
+  }
+  
+  .row.coyuntura img {
+    width: auto;
+margin: 10px auto;
+float: none;
+  }
+
+  </style>
+</head>
+<body>
+	<table class="body">
+		<tr>
+			<td class="center" align="center" valign="top">
+        <center>
+
+          <br>
+
+          <table class="container">
+            <tr>
+              <td>
+
+                <!-- HEADER -->
+                <table class="row header">
+                  <tr>
+                    <td class="wrapper last">
+
+                      <table class="twelve columns">
+                        <tr>
+                          <td style="max-height: 105px; color: transparent; padding: 0; margin: 0;">
+                            <img style="margin: 1px" src="http://imgur.com/Ky9pOiS.jpg">
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                  </tr>
+                </table>
+                <!-- /HEADER -->
+
+                <!-- SUBHEADER -->
+                <table class="row subheader">
+                  <tr>
+                    <td class="wrapper">
+
+                      <table class="six columns">
+                        <tr>
+                          <td>
+
+                            <b>No.</b> 2
+
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                    <td class="wrapper last">
+
+                      <table class="six columns">
+                        <tr>
+                          <td class="last" style="text-align: right;">
+                            
+                            22 de Enero de 2014
+                            
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                  </tr>
+                </table>
+                <!-- SUBHEADER -->
+
+                <!-- EDICION -->
+                <table class="row edicion" bgcolor="#e6e6e6">
+                  <tr>
+                    <td class="wrapper">
+
+                      <table class="two columns">
+                        <tr>
+                          <td class="edicion-cosa">
+                            <img style="margin: 1px 0 0 0" src="http://imgur.com/W2LB6L4.jpg">
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                    <td class="wrapper last">
+
+                      <table class="ten columns">
+                        <tr>
+                          <td style="line-height: 26px;color: #000; font-size: 20px; font-weight: bold;padding: 0;">
+                            <span style="color:#cc0000">Cambio de Ha&#769;bitos y Aspartame</span> | <span style="color:#669900">Sistema de Monitoreo y Evaluacio&#769;n</span> |<br />
+                            | <span style="color:#0071bc">Materiales Estrate&#769;gicos</span> | <span style="color:#663333">Estatus Legislativo</span> | <span style="color:#990066">Asuntos Generales</span>
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+
+                  </tr>
+                </table>
+                <!-- /EDICION -->
+
+                <!-- EDITORIAL -->
+                <table class="row editorial">
+                  <tr>
+                    <td class="wrapper last">
+
+                      <table class="four columns">
+                        <tr>
+                          <td>
+
+                            <img class="center" src="http://imgur.com/ga93Bo4.jpg">
+
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                    <td class="wrapper last">
+
+                      <table class="eight columns">
+                        <tr>
+                          <td>
+
+                            <h2>&nbsp;</h2>
+                            Luego de haber iniciado formalmente la Campan&#771;a 360&deg; de Category Leadership para Ame&#769;rica Latina y dar seguimiento a las acciones planteadas, buscaremos capturar los aprendizajes que juntos vayamos encontrando en el camino para impulsar los ajustes necesarios a la estrategia y lograr asi&#769; nuestros objetivos para el 2014.<br />
+                            <br />
+                            Una de las claves esenciales para el e&#769;xito sera&#769; la medicio&#769;n de las acciones realizadas. Por esta razo&#769;n, dedicaremos esta segunda entrega y la pro&#769;xima conference call y webex al Sistema de Monitoreo y Evaluaci&oacute;n de la Campa&ntilde;a 360&deg; de Category Leadership para Am&eacute;rica Latina.<br />
+                            <br />
+                            Es fundamental, que todos conozcamos este Sistema para que podamos implementarlo de inmediato y observar los resultados de las acciones que emprendemos juntos.<br />
+                            <br />
+                            Para continuar avanzando en la Campan&#771;a, desde el Grupo de AL requerimos, con la mayor celeridad posible, informacio&#769;n de todos los Congresos especializados donde deberi&#769;amos estar presentes, con foco en las tema&#769;ticas definidas. Tambie&#769;n necesitamos conocer la Agenda Legislativa y los tiempos de discusio&#769;n de las propuestas. Quedamos a la espera de recibir ambos materiales.<br />
+                                                        <br/>
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+
+                  </tr>
+                </table>
+                <!-- /EDITORIAL -->
+
+                <!-- SEPARADOR: COYUNTURA -->
+                <table class="row separador">
+                  <tr>
+                    <td class="wrapper last">
+
+                      <table class="twelve columns">
+                        <tr>
+                          <td>
+                            COYUNTURA
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                  </tr>
+                </table>
+                <!-- /SEPARADOR COYUNTURA -->
+
+               <!-- COYUNTURA -->
+                <table class="row coyuntura">
+                  <tr>
+                    <td class="wrapper">
+
+                      <table class="six columns">
+                        <tr>
+                          <td>
+
+                            <h2><span style="color:#ba0412">Inicio de an&#771;o: Cambio de Ha&#769;bitos y Aspartame</span></h2>
+                              <center><img src="http://imgur.com/UQBUeDv.jpg" style="display: block"></center>
+                              Nos mantendremos enfocados en promover cobertura de cambio de ha&#769;bitos. Les solicitamos enviarnos el reporte de cobertura a la brevedad para compartir los resultados que logramos con el equipo.<br />
+<br />
+                            
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                    <td class="wrapper last">
+
+                      <table class="six columns">
+                        <tr>
+                          <td>
+
+                            <h2><span style="color:#f15a24">Coyuntura</span></h2>
+                          El Instituto Colombiano de Bienestar Familiar (ICBF) publico&#769; recientemente las nuevas gui&#769;as alimentarias que son, en principio, los lineamientos y recomendacio&#769;n en el campo de la nutricio&#769;n. En Argentina, el Ministerio de Salud tambie&#769;n emitio&#769; una gui&#769;a alimentaria. En ambos casos no existen prohibiciones ni restricciones del consumo de refrescos.<br />
+                          <br />
+                          En diciembre pasado, en Ecuador se aprobo&#769; el &ldquo;Certificado de conformidad&rdquo; para productos agri&#769;colas e industriales que sean importados al pai&#769;s para su consumo. En esta larga lista no aparecen los refrescos, pero su implementacio&#769;n todavi&#769;a esta&#769; siendo confusa entre los productos que ingresan al pai&#769;s.<br />
+                          <br />
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+
+                  </tr>
+                </table>
+                <!-- /COYUNTURA -->
+
+                <!-- SEPARADOR: ESTATUS -->
+                <table class="row separador">
+                  <tr>
+                    <td class="wrapper last">
+
+                      <table class="twelve columns">
+                        <tr>
+                          <td>&nbsp;
+                          </td>
+                          <td class="expander"></>
+                        </tr>
+                      </table>
+
+                    </td>
+                  </tr>
+                </table>
+                <!-- /SEPARADOR: ESTATUS -->
+
+               <!-- ESTATUS -->
+                <table class="row estatus">
+                  <tr>
+                    <td class="wrapper">
+
+                      <table class="eight columns">
+                        <tr>
+                          <td>
+
+                            <h2><span style="color:#669900">Sistema de Monitoreo y Evaluaci&oacute;n de la Campa&ntilde;a 360&deg; de Category Leadership para Am&eacute;rica Latina</span></h2>
+                            Para determinar el cumplimiento de los objetivos, debemos establecer me&#769;tricas homologadas que permitan identificar las oportunidades, los resultados y las metas para cada Business Unit (BU) y para la regio&#769;n.<br />
+<br />
+                            Los sistemas de evaluacio&#769;n y monitoreo permitira&#769;n capturar los aprendizajes de la implementacio&#769;n de la estrategia regional en pai&#769;ses diferentes y establecera&#769;n con claridad las expectativas que se tienen en la ejecucio&#769;n del plan de accio&#769;n.<br />
+                            <br />
+                            Esta herramienta tambie&#769;n permitira&#769; conocer si existe un equilibrio entre las acciones branded y unbranded a favor de la categori&#769;a y si se esta&#769; logrando balancear la discusio&#769;n sobre temas relacionados con la categori&#769;a, generar opinio&#769;n favorable y fortalecer su reputacio&#769;n.<br />
+                            <br />
+                            Las me&#769;tricas se establecera&#769;n para evaluar los programas y acciones de los tres corredores estrate&#769;gicos planteados:<br />
+                            <ol>
+                              <li>Editorial Content</li>
+                              <li>Grassroots</li>
+                              <li>Plataforma Networking Regional</li>
+                            </ol>
+                            En la pro&#769;xima conference call explicaremos a detalle esta herramienta y la revisaremos en equipo, con la finalidad de comenzar a implementar el sistema antes de febrero.-<br/><br/>
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                    <td class="wrapper last">
+
+                      <table class="four columns">
+                        <tr>
+                          <td>
+
+                            <img src="http://imgur.com/7bGeOHT.jpg">
+
+
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+
+                  </tr>
+                </table>
+                <!-- /ESTATUS -->
+
+                <!-- SEPARADOR: NOVEDADES -->
+                <table class="row separador">
+                  <tr>
+                    <td class="wrapper last">
+
+                      <table class="twelve columns">
+                        <tr>
+                          <td>
+                            NOVEDADES
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                  </tr>
+                </table>
+                <!-- /SEPARADOR: NOVEDADES -->
+
+                <!-- NOVEDADES -->
+                <table class="row coyuntura">
+                  <tr>
+                    <td class="wrapper">
+
+                      <table class="six columns">
+                        <tr>
+                          <td>
+
+                            <h2><span style="color:#0071bc">Materiales Estrate&#769;gicos</span></h2>
+                              Como anunciamos en el nu&#769;mero 1 de este Newsletter, requerimos de su retroalimentacio&#769;n respecto a:<br />
+                              <ul>
+                                <li>Directorio de voceros</li>
+                                <li>Mapas de Actores</li>
+                              </ul>
+                              Estas dos herramientas deben ser actualizadas de manera permanente para asegurar la pertinencia de las acciones que emprendemos durante la implementacio&#769;n de la campan&#771;a.                            
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                    <td class="wrapper last">
+
+                      <table class="six columns">
+                        <tr>
+                          <td>
+
+                            <h2><span style="color:#663333">Estatus Legislativo</span></h2>
+                          El Calendario Legislativo de cada pai&#769;s de la regio&#769;n nos ayudara&#769; a anticipar acciones incluidas en este plan. Esperamos la informacio&#769;n de cada una de las BUs con la mayor celeridad posible.<br />
+                          <center><img src="http://i.imgur.com/1bcc9Dv.png"></center>
+                          
+                        </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+
+                  </tr>
+                </table>
+                <!-- /NOVEDADES -->
+
+                <!-- SEPARADOR: ASUNTOS -->
+                <table class="row separador">
+                  <tr>
+                    <td class="wrapper last">
+
+                      <table class="twelve columns">
+                        <tr>
+                          <td>
+                            ASUNTOS GENERALES
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                  </tr>
+                </table>
+                <!-- /SEPARADOR: ASUNTOS -->
+
+               <!-- NUEVA RUTINA -->
+                <table class="row rutina">
+                  <tr>
+                    <td class="wrapper">
+
+                      <table class="eight columns">
+                        <tr>
+                          <td>
+                            <h2><span style="color:#990066">Pro&#769;xima reunio&#769;n</span></h2>
+
+                            El pro&#769;ximo 24 de enero realizaremos la segunda conference call y webex quincenal de la Campan&#771;a 360&deg; de Category Leadership para Ame&#769;rica Latina. El horario sera&#769; de 11:30 a 14:30, hora de Me&#769;xico y Centroame&#769;rica.<br />
+                            <br />
+                            Aqui&#769; puedes consultar la agenda de la reunio&#769;n:<br />
+                            <ul>
+                              <li>Update PAC LAG<br />
+                              <li>Update de PAC de cada BU<br />
+                              <ul>
+                                <li>Cobertura de Cambio de Ha&#769;bitos y Aspartame</li>
+                                <li>Feedback de Mapeo de Actores y Directorio de Voceros</li>
+                                <li>Necesidades</li>
+                                <li>Reporte de coyuntura</li>
+                              </ul>
+                            </ul>
+                            <br />
+                            Sistema de Monitoreo y Evaluaci&oacute;n de la Campa&ntilde;a 360&deg; de Category Leadership<br />
+                            <ul>
+                              <li>Pro&#769;ximas acciones</li>
+                              <ul>
+                                <li>Envi&#769;o de las agendas y calendarios legislativos</li>
+                                <li>Feedback de herramientas del Sistema de Evaluacio&#769;n y Monitoreo de la Campan&#771;a 360&deg; de Category Leadership para Ame&#769;rica Latina.</li>
+                                <li>Exposicio&#769;n de Buenas Pra&#769;cticas de BU &#769;s</li>
+                              </ul>
+                            </ul>
+    
+                            
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                    <td class="wrapper last">
+
+                      <table class="four columns">
+                        <tr>
+                          <td>
+
+                            <img src="http://imgur.com/0oBHUsN.jpg">
+
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+
+                  </tr>
+                </table>
+                <!-- /NUEVA RUTINA -->
+
+                
+                <!-- FOOTER -->
+                <table class="row header">
+                  <tr>
+                    <td class="wrapper last">
+
+                      <table class="twelve columns">
+                        <tr>
+                          <td style="height: 50px; background: #4d4d4d; color: #fff;padding: 15px 0 0;
+font-size: 11px;">
+<center>Este documento es s&oacute;lo para <b>USO INTERNO Y CONFIDENCIAL</b>. Su difusi&oacute;n, distribuci&oacute;n, retransmisi&oacute;n, copia de cualquier tipo, est&aacute; prohibida y sujeta a las penalidades establecidas en las leyes y c&oacute;digos relevantes.</center>
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                  </tr>
+                </table>
+                <!-- FOOTER -->
+
+                <!-- container end below -->
+              </td>
+            </tr>
+          </table>
+
+        </center>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
